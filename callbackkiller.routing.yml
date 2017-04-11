@@ -1,0 +1,7 @@
+callbackkiller.settings:
+  path: '/admin/vvmspace/callbackkiller/settings'
+  defaults:
+    _form: '\Drupal\callbackkiller\Form\callbackkillerSettingsForm'
+    _title: 'callbackkiller'
+  requirements:
+    _permission: 'administer site configuration'
