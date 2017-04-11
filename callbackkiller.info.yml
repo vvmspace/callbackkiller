@@ -1,0 +1,6 @@
+name: "Callbackkiller Widget Module"
+description: "Модуль заказа обратного звонка от CallbackKILLER, подробнее о сервисе: http://cb-killer.ru/callback/?r=54763&c=106"
+type: module
+core: 8.x
+version: 0.0.7
+package: VVM.space
