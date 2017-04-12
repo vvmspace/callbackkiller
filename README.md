@@ -26,7 +26,7 @@ http://cb-killer.ru/callback/?r=54763&c=106
 
 2.В папке modules - создайте папку vvmspace или custom
 
-3.Скопируйте туда папку callbackkiller
+3.Скопируйте туда папку callbackkiller (для самой свежей версии - можно сделать git clone https://github.com/vvmspace/callbackkiller из консоли)
 
 4.Включите модуль:
 адрес-сай.та/admin/modules
