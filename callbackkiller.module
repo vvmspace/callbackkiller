@@ -24,25 +24,3 @@ function callbackkiller_preprocess_html(&$variables)
             $variables['page']['#attached']['html_head'][] = [$js, 'js'];
             $variables['page']['#attached']['html_head'][] = [$css, 'css'];
 }
-
-function callbackkiller_menu() {
-  $items['admin/config/vvmspace'] = array(
-    'title' => 'VVM.space modules',
-    'position' => 'left',
-    'weight' => -100,
-    'page callback' => 'system_admin_menu_block_page',
-    'access arguments' => array('administer site configuration'),
-    'file' => 'system.admin.inc',
-    'file path' => drupal_get_path('module', 'system'),
-  );
- 
-  $items['admin/config/vvmspace/callbackkiller'] = array(
-    'title' => 'CF setting',
-    'description' => 'CallbackKiller configuration',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('callbackkiller_config_form'),
-    'access arguments' => array('administer site configuration'),
-    'file' => 'callbackkiller.admin.inc',
-  );
-  return $items;
-}
