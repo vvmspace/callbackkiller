@@ -5,8 +5,8 @@
 function callbackkiller_preprocess_html(&$variables)
 {
 	$config = \Drupal::config('callbackkiller.settings');
-	$js = [
-        '#tag' => 'script',
+			$js = [
+        		'#tag' => 'script',
                 '#attributes' => [
                     'type' => 'text/javascript',
                     'src' => 'https://cdn.envybox.io/widget/cbk.js?wcb_code=' . $config->get('callbackkiller_code'),
@@ -21,6 +21,8 @@ function callbackkiller_preprocess_html(&$variables)
                     'href' => 'https://cdn.envybox.io/widget/cbk.css',
                 ],
             ];
-            $variables['page']['#attached']['html_head'][] = [$js, 'js'];
-            $variables['page']['#attached']['html_head'][] = [$css, 'css'];
+            if (!preg_match('/admin/', $_SERVER["REQUEST_URI"])){
+            	$variables['page']['#attached']['html_head'][] = [$js, 'js'];
+            	$variables['page']['#attached']['html_head'][] = [$css, 'css'];
+        	}
 }
