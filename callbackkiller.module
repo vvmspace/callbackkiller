@@ -4,11 +4,12 @@
  */
 function callbackkiller_preprocess_html(&$variables)
 {
-			$js = [
-                '#tag' => 'script',
+	$config = \Drupal::config('callbackkiller.settings');
+	$js = [
+        '#tag' => 'script',
                 '#attributes' => [
                     'type' => 'text/javascript',
-                    'src' => 'https://cdn.envybox.io/widget/cbk.js?wcb_code=6b5697253104174cf41e7c4ffe4245c1',
+                    'src' => 'https://cdn.envybox.io/widget/cbk.js?wcb_code=' . $config->get('callbackkiller_code'),
                     'charset' => "UTF-8",
                     'async' => true,
                 ],

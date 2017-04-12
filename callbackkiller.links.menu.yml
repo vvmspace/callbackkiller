@@ -1,0 +1,12 @@
+callbackkiller.admin:
+  title: 'CallbackKILLER'
+  description: 'Set up your CallbackKILLER code'
+  parent: system.admin_config_development
+  route_name: callbackkiller.settings
+  weight: 100
+  route_parameters: { key: 'value' }
+  #If menu_name is omitted, the "Tools" menu will be used.
+  menu_name: devel 
+  options: 
+    attributes:
+      target: _blank
